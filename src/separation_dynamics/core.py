@@ -33,7 +33,7 @@ def tangential_impulse(altitude_m: float, delta_v_m_s: float) -> dict[str, float
     other = 2 * a - r
     if other <= R_EARTH:
         raise ValueError("post-impulse path intersects Earth")
-    perigee, apogee = (r, other) if delta_v_m_s >= 0 else (other, r)
+    perigee, apogee = sorted((r, other))
     drift = abs(math.sqrt(MU_EARTH / a**3) - math.sqrt(MU_EARTH / r**3)) * 86400 * 180 / math.pi
     return {"perigee_altitude_m": perigee-R_EARTH, "apogee_altitude_m": apogee-R_EARTH, "phase_drift_deg_day": drift}
 

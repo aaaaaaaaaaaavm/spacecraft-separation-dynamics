@@ -11,3 +11,12 @@ class CoreTests(unittest.TestCase):
         self.assertGreater(result["apogee_altitude_m"],result["perigee_altitude_m"])
 
 if __name__ == "__main__": unittest.main()
+
+class DirectionReversalRegressionTests(unittest.TestCase):
+    def test_reversed_velocity_orders_apses_by_radius(self):
+        import math
+        from separation_dynamics.core import MU_EARTH,R_EARTH
+        speed=math.sqrt(MU_EARTH/(R_EARTH+500_000))
+        result=tangential_impulse(500_000,-2*speed-10)
+        self.assertAlmostEqual(result["perigee_altitude_m"],500_000)
+        self.assertGreater(result["apogee_altitude_m"],result["perigee_altitude_m"])
