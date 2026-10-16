@@ -11,8 +11,15 @@ def _positive(**values: float) -> None:
 
 
 def host_recoil(payload_mass_kg: float, separation_speed_m_s: float, host_mass_kg: float) -> float:
-    _positive(payload_mass_kg=payload_mass_kg, separation_speed_m_s=separation_speed_m_s, host_mass_kg=host_mass_kg)
-    return payload_mass_kg * separation_speed_m_s / host_mass_kg
+    """Host delta-v magnitude for signed payload-to-host relative separation speed.
+
+    host_mass_kg is the remaining host mass, excluding the released payload.
+    The initial combined assembly is at rest in the local momentum frame.
+    """
+    _positive(payload_mass_kg=payload_mass_kg, host_mass_kg=host_mass_kg)
+    if not math.isfinite(separation_speed_m_s):
+        raise ValueError("separation speed must be finite")
+    return abs(payload_mass_kg * separation_speed_m_s / (host_mass_kg + payload_mass_kg))
 
 
 def tipoff(angular_impulse_n_m_s: float, inertia_kg_m2: float) -> float:

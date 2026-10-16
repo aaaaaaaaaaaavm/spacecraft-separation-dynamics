@@ -15,3 +15,13 @@ Regenerate the chart with `python tools/generate_figure.py`; run tests with
 `python -m unittest discover -s tests -v`.
 This focused library complements the broader [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)
 programme without duplicating its architecture.
+
+## Separation convention
+
+`host_recoil` accepts signed payload-to-host relative separation speed and returns a
+non-negative recoil magnitude. `host_mass_kg` is the remaining host, excluding the payload.
+For payload m and host M, recoil is `m * abs(u) / (M + m)`; payload inertial delta-v is
+`M * u / (M + m)`. Their momentum changes cancel. Zero release speed gives zero recoil.
+The original denominator M was an approximation when u was interpreted as relative speed.
+These are instantaneous rigid-body screens without external impulse, flexible response or
+controller dynamics; they do not establish safe separation.
