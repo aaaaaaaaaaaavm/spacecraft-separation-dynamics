@@ -1,0 +1,22 @@
+{
+  "revision": "2026-10-19 scientific presentation edition",
+  "scope": "Selected current figure sets only. Retained historical graphics are not automatically certified compliant.",
+  "figures": [
+    {
+      "evidence_class": "Two-body analytical plot",
+      "caption": "phase drift",
+      "limitations": "Diagram or analytical screen; no measured hardware, qualified design or inherited side-project evidence.",
+      "sources": {
+        "tools/generate_figure.py": "2276200098942d557a0585989dbaf4ff06267669f129e613714a7ea72dfbe2bb",
+        "tools/scientific.mplstyle": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9",
+        "src/separation_dynamics/__init__.py": "5c4b972a6c7f5bb5e75e31d3de799842ec135cd0f85f42d20d3843b027ae349d",
+        "src/separation_dynamics/core.py": "5adc585017ee91dfda631d5aadee813a94f3f81aafbf102038648494774062d9"
+      },
+      "exports": {
+        "figures/phase-drift.svg": "108ce5a75d5adf19d668d3828e3e813613a17d104d80e47814e68dee2bf5e703",
+        "figures/phase-drift.pdf": "cd0515bcfc4626e6d8ace40f82f9e2f7dc2903131b6bee1090463c0231ec0304",
+        "figures/phase-drift.png": "eea38fd1cd972616e38eeff7b26e5188cfbb9b49c160c80e596656e08ded30fc"
+      }
+    }
+  ]
+}

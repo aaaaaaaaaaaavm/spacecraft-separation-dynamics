@@ -12,3 +12,6 @@ authors = [{name = "Adityavardhan Mishra"}]
 dependencies = []
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.8"]

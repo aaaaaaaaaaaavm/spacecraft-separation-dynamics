@@ -25,3 +25,7 @@ For payload m and host M, recoil is `m * abs(u) / (M + m)`; payload inertial del
 The original denominator M was an approximation when u was interpreted as relative speed.
 These are instantaneous rigid-body screens without external impulse, flexible response or
 controller dynamics; they do not establish safe separation.
+
+[Scientific figures and documentation conventions](docs/FIGURE_STANDARD.md) · [Released figure sources](docs/SCIENTIFIC_FIGURES.json)
+
+The overview figures are regenerated with `python tools/generate_figure.py`. Quantitative plots retain their committed model inputs; diagrams describe relationships and do not add validation evidence.
