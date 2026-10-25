@@ -5,6 +5,12 @@
 Dependency-free, first-order calculations for separation impulse, host recoil, tip-off,
 and a symmetric internal mass move. Each function exposes its narrow physical boundary.
 
+Install from the repository root with Python 3.11 or newer:
+
+```bash
+python -m pip install -e .
+```
+
 ```python
 from separation_dynamics import host_recoil, tangential_impulse
 print(host_recoil(10, 2, 1000))
@@ -29,3 +35,9 @@ controller dynamics; they do not establish safe separation.
 [Scientific figures and documentation conventions](docs/FIGURE_STANDARD.md) · [Released figure sources](docs/SCIENTIFIC_FIGURES.json)
 
 The overview figures are regenerated with `python tools/generate_figure.py`. Quantitative plots retain their committed model inputs; diagrams describe relationships and do not add validation evidence.
+
+## Version and case reference
+
+[Current VOLLEY case boundary](docs/VOLLEY_CASE.md) · [Citation](CITATION.cff) · [License](LICENSE) · [Attribution](NOTICE)
+
+[Publication rules and exact-payload checks](PUBLICATION_POLICY.md)

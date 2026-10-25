@@ -2,3 +2,7 @@ spacecraft-separation-dynamics
 Copyright 2026 Adityavardhan Mishra
 
 Includes generalised methods originating in orbital-deployment-trade-study and VOLLEY.
+
+Publication checker: adapted from VOLLEY/tools/prepublish_gate.py.
+Copyright (c) 2026 Adityavardhan Mishra; source identity is retained in the script.
+Repository and source-fixture licenses remain unchanged.

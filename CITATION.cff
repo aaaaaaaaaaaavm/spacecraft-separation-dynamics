@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite this software version and the exact source/result revision used; historical VOLLEY fixtures have their own provenance."
+title: "spacecraft-separation-dynamics"
+type: software
+authors:
+  - family-names: Mishra
+    given-names: Adityavardhan
+license: Apache-2.0
+repository-code: "https://github.com/aaaaaaaaaaaavm/spacecraft-separation-dynamics"
+version: "0.1.1"
